@@ -2,8 +2,8 @@ package translation
 
 import (
 	"fmt"
+	"github.com/OkyHp/plg_utils/s2sdk"
 	"os"
-	"plg_utils/s2sdk"
 	"strings"
 
 	"github.com/untrustedmodders/go-plugify"
