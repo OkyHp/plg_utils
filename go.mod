@@ -1,4 +1,4 @@
-module plg_utils
+module github.com/OkyHp/plg_utils
 
 go 1.25.5
 
