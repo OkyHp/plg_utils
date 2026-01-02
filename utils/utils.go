@@ -8,7 +8,7 @@ import (
 )
 
 func CreateManifest(name, version, author string, dependencies []string) {
-	err := plugify.Generate("./...", "./build/", name, version, "", author, "", "", make([]string, 0), dependencies, make([]string, 0), name, "main")
+	err := plugify.Generate("./...", "", name, version, "", author, "", "", make([]string, 0), dependencies, make([]string, 0), name, "main")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error generating plugin manifest: %v\n", err)
 		os.Exit(1)
