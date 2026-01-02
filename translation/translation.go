@@ -2,11 +2,11 @@ package translation
 
 import (
 	"fmt"
-	"github.com/OkyHp/plg_utils/s2sdk"
 	"os"
 	"strings"
 
-	"github.com/untrustedmodders/go-plugify"
+	"github.com/OkyHp/plg_utils/s2sdk"
+
 	"gopkg.in/yaml.v3"
 )
 
@@ -42,8 +42,8 @@ var ChatColors = map[string]string{
 var translations = make(map[string]map[string]string)
 
 // LoadTranslation - загружает переводы из YAML файла
-func LoadTranslation(fileName string) error {
-	pathToFile := fmt.Sprintf("%s%s/%s.yml", plugify.BaseDir, "translations", fileName)
+func LoadTranslation(dir, fileName string) error {
+	pathToFile := fmt.Sprintf("%s%s/%s.yml", dir, "translations", fileName)
 
 	// Читаем файл
 	data, err := os.ReadFile(pathToFile)
