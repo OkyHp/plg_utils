@@ -69,7 +69,7 @@ func LoadTranslation(dir, fileName string) error {
 func processPlaceholders(input string) string {
 	result := input
 	for name, value := range ChatColors {
-		placeholder := fmt.Sprintf("{ChatColors.%s}", name)
+		placeholder := fmt.Sprintf("{%s}", name)
 		result = strings.ReplaceAll(result, placeholder, value)
 	}
 	return result
