@@ -43,7 +43,7 @@ var translations = make(map[string]map[string]string)
 
 // LoadTranslation - загружает переводы из YAML файла
 func LoadTranslation(dir, fileName string) error {
-	pathToFile := fmt.Sprintf("%s%s/%s.yml", dir, "translations", fileName)
+	pathToFile := fmt.Sprintf("%s/%s.yml", dir, fileName)
 
 	// Читаем файл
 	data, err := os.ReadFile(pathToFile)
